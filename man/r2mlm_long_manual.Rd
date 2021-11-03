@@ -64,7 +64,7 @@ researcher’s previously fit longitudinal growth model (hence, any software
 program can have been used to fit the researcher’s longitudinal growth model
 prior to the use of this R function, so long as parameter estimates from the
 fitted model are recorded; note that this function accommodates
-non-longitudnal models as well). This function then outputs R-squared
+non-longitudinal models as well). This function then outputs R-squared
 measures as well as variance decompositions and associated bar charts
 outlined in Rights & Sterba (2021). This function allows researchers to input
 heteroscedastic residual variance by including multiple estimates, for
@@ -75,6 +75,23 @@ potential source of explained variance (f1, f2, v1, v2, and m). Note,
 however, that the interpretations of these sources differ for
 person-mean-centered versus non-person-mean-centered models and that variance
 attributable to v2 will necessarily be 0 for person-mean-centered models.
+}
+\examples{
+# Removing cluster-mean-centering from the teachsat dataset, for
+# demonstration purposes
+
+teachsat$salary <- teachsat$salary_c + 2
+uncentered_model <- lmer(satisfaction ~ salary + (1 | schoolID), data = teachsat)
+
+r2mlm_long_manual(data = teachsat,
+                  covs = c("salary"),
+                  random_covs = NULL,
+                  clusterID = "schoolID",
+                  gammas = c(0.07430),
+                  Tau = as.matrix(Matrix::bdiag(VarCorr(uncentered_model))),
+                  sigma2 = getME(uncentered_model, "sigma")^2,
+                  bargraph = TRUE)
+
 }
 \seealso{
 Rights, J. D., & Sterba, S. K. (2021). Effect size measures for
