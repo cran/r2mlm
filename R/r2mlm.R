@@ -22,13 +22,15 @@
 #' attributable to random intercepts and slopes, called the “marginal” and
 #' “conditional” approaches (e.g., Edwards et al., 2008; Orelien & Edwards,
 #' 2008; Vonesh & Chinchilli, 1997; Wang & Schaalje, 2009; Xu, 2003). In the
-#' marginal approach, all variance attributable to predictor and cluster mean
-#' variation is treated as unexplained. In the conditional approach, all
-#' variance attributable to predictors and cluster mean variation is treated as
-#' explained. This package offers researchers access to both the marginal and
-#' conditional approaches. There are 5 marginal measures: f1_total, f2_total,
-#' f_total, f1_within, and f2_between. The other 7 measures are conditional:
-#' v_total, m_total, fv_total, fvm_total, v_within, f1v_within, and m_between.
+#' marginal approach, all variance attributable to predictors via random slope
+#' variation and attributable to cluster means via random intercept variation
+#' (i.e., sources “v” and “m”) is treated as unexplained. In the conditional
+#' approach, variance attributable to predictors via random slope variation
+#' and/or attributable to cluster mean variation is treated as explained. This
+#' package offers researchers access to both the marginal and conditional
+#' approaches. There are 5 marginal measures: f1_total, f2_total, f_total,
+#' f1_within, and f2_between. The other 7 measures are conditional: v_total,
+#' m_total, fv_total, fvm_total, v_within, f1v_within, and m_between.
 #'
 #' @param model A model generated using \code{\link[lme4]{lmer}} or
 #'   \code{\link[nlme]{nlme}}. Note that models using \code{lmer} must specify
@@ -73,13 +75,12 @@
 #' @family r2mlm single model functions
 #'
 #' @importFrom lme4 ranef fixef VarCorr getME
-#' @importFrom broomExtra augment
 #' @importFrom nlme asOneFormula
 #' @importFrom magrittr %>%
 #' @importFrom stats terms formula model.frame
 #' @importFrom stringr str_split_fixed
 #' @importFrom rlang := .data
-#'
+#' @importFrom methods is
 #'
 #' @export
 
@@ -137,7 +138,7 @@ r2mlm_lmer <- function(model, bargraph) {
 
   for (variable in outcome_and_predictors) {
 
-    if (!(class(data[[variable]]) == "integer") && !(class(data[[variable]]) == "numeric")) {
+    if (!is(data[[variable]], "integer") && !is(data[[variable]], "numeric")) {
       stop("Your data must be numeric. Only the cluster variable can be a factor.")
     }
 
@@ -253,7 +254,7 @@ r2mlm_nlme <- function(model, bargraph) {
 
   for (variable in outcome_and_predictors) {
 
-    if (!(class(data[[variable]]) == "integer") && !(class(data[[variable]]) == "numeric")) {
+    if (!is(data[[variable]], "integer") && !is(data[[variable]], "numeric")) {
       stop("Your data must be numeric. Only the cluster variable can be a factor.")
     }
 
