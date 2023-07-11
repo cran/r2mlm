@@ -1,7 +1,7 @@
 Package: r2mlm
 Type: Package
 Title: R-Squared Measures for Multilevel Models
-Version: 0.3.3
+Version: 0.3.4
 Authors@R: c(
     person("Mairead", "Shaw", email = "mairead.shaw@mail.mcgill.ca", role = c("aut", "cre")),
     person("Jason", "Rights", email = "jrights@psych.ubc.ca", role = "aut"),
@@ -22,19 +22,19 @@ Description: Generates both total- and level-specific R-squared measures from
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Imports: dplyr (>= 0.8.5), magrittr (>= 1.5), methods (>= 3.6.3), rlang
-        (>= 0.4.6), rockchalk (>= 1.8.144), stringr (>= 1.4.0),
-        tidyselect (>= 1.0.0)
+Imports: dplyr (>= 0.8.5), magrittr (>= 1.5), methods (>= 3.6.3), misty
+        (>= 0.4.12), rlang (>= 0.4.6), stringr (>= 1.4.0), tidyselect
+        (>= 1.0.0)
 Depends: lme4 (>= 1.1.23), nlme (>= 3.1.14), R (>= 3.2.0)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1
 Suggests: testthat, Matrix
 URL: https://github.com/mkshaw/r2mlm
 BugReports: https://github.com/mkshaw/r2mlm/issues
 NeedsCompilation: no
-Packaged: 2023-03-27 20:49:26 UTC; maireadshaw
+Packaged: 2023-07-10 21:49:41 UTC; maireadshaw
 Author: Mairead Shaw [aut, cre],
   Jason Rights [aut],
   Sonya Sterba [aut],
   Jessica Flake [aut]
 Repository: CRAN
-Date/Publication: 2023-03-28 02:30:02 UTC
+Date/Publication: 2023-07-11 12:00:02 UTC
