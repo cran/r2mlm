@@ -1,13 +1,14 @@
-07ff46a8fead77cb5444a45446cae9db *DESCRIPTION
-c57e6755d15ca7eb4e97515d7bd9e108 *NAMESPACE
-699d3cb75037ba2a915a0dad9313ce26 *NEWS.md
+034430981116e96d836f8dcd0b78fb11 *DESCRIPTION
+c53e7b1f3c6d33caf1c335f09b0103a7 *NAMESPACE
+2f40786c8eb7cb68ec88516b8fbd4d77 *NEWS.md
 603a4461292ae6b1372fc57ed0c73018 *R/data.R
 c13c0db8ef5bd87d2c6650632afd26a5 *R/prepare_data.R
 5338025be76b1584c4570bd64ea253f2 *R/r2mlm.R
 4806f45ed04a8505ba28984fca7f1dd0 *R/r2mlm3_manual.R
 e93d32995499d0de0ea42b1b1594c19f *R/r2mlm_comp.R
 ff6792c2606b2d6571ad16adaaac60a5 *R/r2mlm_comp_manual.R
-fac82a0ec235b25f900459b4c60cb1a1 *R/r2mlm_long_manual.R
+3b6c0c75ff0fd5a7eececa869df51c5a *R/r2mlm_internal.R
+8ac5555728895288b6d00ad8e80d9a72 *R/r2mlm_long_manual.R
 9c7f073a778332cf0b4e20f7f6246f33 *R/r2mlm_manual.R
 020b0d65a64a827daae3ba57d8dbc041 *R/utils.R
 90601d61945b8279f8a84e1e45284346 *README.md
@@ -19,6 +20,6 @@ beaa28a49108f3cabb78e72c9057f7fc *man/figures/README-example-1.png
 7138d44c6a08075d82e363812d72f45f *man/r2mlm3_manual.Rd
 41d3cf89112aefacc91e68fb67a47760 *man/r2mlm_comp.Rd
 1b48257fb8fe47b321a44ec3af2f1354 *man/r2mlm_comp_manual.Rd
-6e0d590cd8b93d8363406e533ed65a06 *man/r2mlm_long_manual.Rd
+2e60d87d662caabcb7975902dda66981 *man/r2mlm_long_manual.Rd
 8ae281a8fa7d7a97e402ff3aadb40705 *man/r2mlm_manual.Rd
 c53d3936411804ec9f3b5c7227ee1be4 *man/teachsat.Rd
