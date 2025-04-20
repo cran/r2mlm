@@ -65,8 +65,6 @@ library(r2mlm)
 
 # Generate the model, in this case with lme4:
 model <- lmer(satisfaction ~ 1 + salary_c + s_t_ratio + (1 + salary_c | schoolID), data = teachsat, REML = TRUE)
-#> Warning in checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv, :
-#> Model failed to converge with max|grad| = 0.00626324 (tol = 0.002, component 1)
 
 # Adjust plot margins
 par(mar = c(6.75, 10.5, 2.625, 10.5))
@@ -78,22 +76,22 @@ r2mlm(model)
 <img src="man/figures/README-example-1.png" width="100%" />
 
     #> $Decompositions
-    #>                      total    within   between
-    #> fixed, within   0.18837930 0.2792572        NA
-    #> fixed, between  0.06806328        NA 0.2091505
-    #> slope variation 0.09206018 0.1364718        NA
-    #> mean variation  0.25736400        NA 0.7908495
-    #> sigma2          0.39413323 0.5842709        NA
+    #>                 total              within             between          
+    #> fixed, within   0.0817367298644048 0.142930358177837  NA               
+    #> fixed, between  0.0650803204186671 NA                 0.152008530367315
+    #> slope variation 0.0376662281262814 0.0658657067175134 NA               
+    #> mean variation  0.363055654986177  NA                 0.847991469632685
+    #> sigma2          0.452461066604469  0.79120393510465   NA               
     #> 
     #> $R2s
-    #>          total    within   between
-    #> f1  0.18837930 0.2792572        NA
-    #> f2  0.06806328        NA 0.2091505
-    #> v   0.09206018 0.1364718        NA
-    #> m   0.25736400        NA 0.7908495
-    #> f   0.25644258        NA        NA
-    #> fv  0.34850277 0.4157291        NA
-    #> fvm 0.60586677        NA        NA
+    #>     total              within             between          
+    #> f1  0.0817367298644048 0.142930358177837  NA               
+    #> f2  0.0650803204186671 NA                 0.152008530367315
+    #> v   0.0376662281262814 0.0658657067175134 NA               
+    #> m   0.363055654986177  NA                 0.847991469632685
+    #> f   0.146817050283072  NA                 NA               
+    #> fv  0.184483278409353  0.20879606489535   NA               
+    #> fvm 0.547538933395531  NA                 NA
 
 ## Package Functions
 

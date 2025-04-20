@@ -1,7 +1,7 @@
 Package: r2mlm
 Type: Package
 Title: R-Squared Measures for Multilevel Models
-Version: 0.3.7
+Version: 0.3.8
 Authors@R: c(
     person("Mairead", "Shaw", email = "mairead.shaw@mail.mcgill.ca", role = c("aut", "cre")),
     person("Jason", "Rights", email = "jrights@psych.ubc.ca", role = "aut"),
@@ -33,10 +33,10 @@ Suggests: bootmlm, testthat, Matrix
 URL: https://github.com/mkshaw/r2mlm
 BugReports: https://github.com/mkshaw/r2mlm/issues
 NeedsCompilation: no
-Packaged: 2023-12-20 15:29:38 UTC; maireadshaw
+Packaged: 2025-04-19 20:05:02 UTC; maireadshaw
 Author: Mairead Shaw [aut, cre],
   Jason Rights [aut],
   Sonya Sterba [aut],
   Jessica Flake [aut]
 Repository: CRAN
-Date/Publication: 2023-12-20 15:50:05 UTC
+Date/Publication: 2025-04-20 01:22:02 UTC
